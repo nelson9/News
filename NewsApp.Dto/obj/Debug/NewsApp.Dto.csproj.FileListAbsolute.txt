@@ -1,0 +1,7 @@
+C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Dto\bin\Debug\NewsApp.Dto.dll
+C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Dto\bin\Debug\NewsApp.Dto.pdb
+C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Dto\bin\Debug\NewsApp.Models.dll
+C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Dto\bin\Debug\NewsApp.Models.pdb
+C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Dto\obj\Debug\NewsApp.Dto.csprojResolveAssemblyReference.cache
+C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Dto\obj\Debug\NewsApp.Dto.dll
+C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Dto\obj\Debug\NewsApp.Dto.pdb

@@ -1,0 +1,121 @@
+﻿//
+//  Tools
+//  -----
+@import '_tools/variables';
+@import '_tools/functions';
+
+
+//
+//  Base Styles
+//  -----------
+//  Site base styles, including resets, base typography
+//  and base layout styles. Ordering is important. Reset should appear
+//  first.
+@import '_base/reset';
+@import '_base/fonts';
+@import '_base/grid';
+@import '_base/typography';
+
+//
+//  Header and footers
+//  ------------------
+@import '_headerfooter/header';
+@import '_headerfooter/footer';
+
+
+.home-page-header {
+    background-image: url('../img/home-bg.jpg');
+    width: 100%;
+    margin-bottom: 50px;
+    min-height: 448px;
+    background-size: cover;
+}
+
+.body-content{
+
+}
+
+
+.site-heading {
+    h1 {
+        font-size: 80px;
+        color: white;
+        font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-weight: 800;
+        padding: 85px 0 15px 0;
+        text-align: center;
+    }
+
+    hr {
+        width: 100px;
+    }
+}
+
+.sub-heading {
+    font-size: 24px;
+    line-height: 1.1;
+    display: block;
+    font-weight: 300;
+    margin: 10px 0 0;
+    color: white;
+    text-align: center;
+}
+
+.news-preview {
+         margin-bottom: 65px;
+         padding-bottom:20px;
+         border-bottom: solid 1px lightgray;
+     a {
+        margin-top: 30px !important;
+        margin-bottom: 10px !important;
+        font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+        font-size: 36px !important;
+        font-weight: 800 !important;
+    }
+
+    h3 {
+        font-size: 24px;
+        font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    }
+
+    p {
+        color: #777;
+        font-size: 18px;
+        font-style: italic;
+        margin-top: 0;
+    }
+}
+
+footer{
+    margin:70px auto 25px auto;   
+    padding: 50px 0 20px;
+    color:lightgray
+}
+
+textarea{
+    max-width:600px;
+    min-height:300px;
+}
+
+input{
+    max-width:600px;
+}
+
+.article-table{
+     max-width:600px;
+}
+
+.social-media{
+    ul{
+        text-align:center;
+    }
+    li{
+        float:left;
+        list-style-type: none;
+        padding:0 10px 0 10px;
+    }
+}
+
+.copyright{
+
+}
