@@ -1,22 +1,12 @@
 ﻿<div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <div class="news-preview">
-            <a href="">
-                <h2>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2>
-
-                <h3>Problems look mighty small from 150 miles up</h3>
-            </a> 
-            <p class="date">Posted 2 days ago by Niall Ferguson</p>
-        </div>
-        <div class="news-preview">
-            <a href="">
-                <h2>I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2>
-
-                <h3>Problems look mighty small from 150 miles up</h3>
+    <div ng-controller="NewsController" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <article ng-repeat="newsItem in latestNews" class="news-preview">
+            <a ng-href="/home/news/{{newsItem.id}}" >
+                <h2>{{newsItem.title}}</h2>
             </a>
-            <p class="date">Posted 2 days ago by Niall Ferguson</p>
-        </div>
-        
+            <h3>{{newsItem.subtitle}}</h3>
+            <p class="date">Posted {{newsItem.publishedAgo}} days ago by {{newsItem.author}}</p>
+        </article>
     </div>
 </div>
     
@@ -25,27 +15,23 @@
 
 @section Scripts
 {
-    <script type="text/javascript">
-        var uri = '../api/article';
-        $(document).ready(function () {
-            var articleContainer = $('#article-container');
-            $.getJSON(uri)
-                .done(function (data) {
-                    $.each(data, function (key, item) {
-                        articleContainer.append(
-                               "<article><header><h1>"
-                               + item.title + "</h1><p class='time'>Published: <time pubdate datetime='"
-                               + item.publishedAgo + "'>"
-                               + item.publishedAgo
-                               + "</time></p></header><p>"
-                               + item.body
-                               + "</p><p>"
-                               + "<span class='likes'>"
-                               + item.likes + "</span></p><input class='likeCheck' type='checkbox'></input></article>"
-                            );
+    <script>
+        var app = angular.module("newsApp", []);
+
+        app.controller("NewsController",
+            function($scope, $http) {
+                $http.get("../api/article")
+                    .success(function(data, status, headers, config) {
+                        $scope.latestNews = data;
+                        
+                    })
+                    .error(function(data, status, headers, config) {
+                        
                     });
-                });
-        });
+            }
+        );
+
+
     </script>
 
 }

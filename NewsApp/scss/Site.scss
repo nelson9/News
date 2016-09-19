@@ -31,8 +31,7 @@
     background-size: cover;
 }
 
-.body-content{
-
+.body-content {
 }
 
 
@@ -61,11 +60,12 @@
     text-align: center;
 }
 
-.news-preview {
-         margin-bottom: 65px;
-         padding-bottom:20px;
-         border-bottom: solid 1px lightgray;
-     a {
+article {
+    margin-bottom: 65px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px lightgray;
+
+    a {
         margin-top: 30px !important;
         margin-bottom: 10px !important;
         font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif !important;
@@ -76,46 +76,70 @@
     h3 {
         font-size: 24px;
         font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+        color: #999999;
     }
 
     p {
         color: #777;
         font-size: 18px;
         font-style: italic;
-        margin-top: 0;
+        margin-top: 20px;
+    }
+    footer{
+            margin: 25px auto 25px auto;
+            padding: 0 0 00px;
+    }
+   
+}
+.author{
+    font-weight:600;
+}
+footer {
+    margin: 70px auto 25px auto;
+    padding: 50px 0 20px;
+    color: lightgray;
+}
+
+textarea {
+    max-width: 600px;
+    min-height: 300px;
+}
+
+input {
+    max-width: 600px;
+}
+
+.article-table {
+    max-width: 600px;
+}
+
+.social-media {
+    ul {
+        text-align: center;
+    }
+
+    li {
+        float: left; 
+        list-style-type: none;
+        padding: 0 10px 0 10px;
     }
 }
 
 footer{
-    margin:70px auto 25px auto;   
-    padding: 50px 0 20px;
-    color:lightgray
-}
-
-textarea{
-    max-width:600px;
-    min-height:300px;
-}
-
-input{
-    max-width:600px;
-}
-
-.article-table{
-     max-width:600px;
-}
-
-.social-media{
-    ul{
-        text-align:center;
-    }
-    li{
-        float:left;
-        list-style-type: none;
-        padding:0 10px 0 10px;
+    .copyright {
+        float: right;
+    padding-top: 20px;
     }
 }
 
-.copyright{
+.post-like{  
+      font-size: 14px!important; 
+      float:right;
+      margin-left:8px; 
+          margin-top: 20px;
+    margin-bottom: 10px;
+}
 
+.float-right{
+    float:right; 
 }

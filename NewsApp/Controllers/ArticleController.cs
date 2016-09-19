@@ -105,5 +105,25 @@ namespace NewsApp.Controllers
                 return InternalServerError();
             }
         }
+
+        [HttpGet]
+        [Route("api/article/like/{id}", Name = "Like")]
+        public IHttpActionResult Like(int id)
+        {
+            var article = _articleRepository.Get(id);
+            if (article == null) return NotFound();
+            try
+            {
+                article.Likes++;
+                _articleRepository.Update(article);
+                _articleRepository.SaveChanges();
+
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+        }
     }
 }

@@ -20,11 +20,12 @@ namespace NewsApp.Dto.Factories
             {
                 Id = article.Id,
                 Title = article.Title,
-                //Subtitle = article.Subtitle,
+                Subtitle = article.Subtitle,
                 Body = article.Body,
                 Likes = article.Likes,
                 Comments = article.Comments,
-                PublishedAgo = SetTimeAgo(article.PublishDate)
+                PublishedAgo = SetTimeAgo(article.PublishDate),
+                Author = article.Author
             };
 
             return articleDto;

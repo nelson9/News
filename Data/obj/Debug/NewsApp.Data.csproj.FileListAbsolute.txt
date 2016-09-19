@@ -22,3 +22,15 @@ C:\Users\Niall\Documents\GitHub\NewsApp\Data\bin\Debug\EntityFramework.SqlServer
 C:\Users\Niall\Documents\GitHub\NewsApp\Data\obj\Debug\NewsApp.Data.csprojResolveAssemblyReference.cache
 C:\Users\Niall\Documents\GitHub\NewsApp\Data\obj\Debug\Data.dll
 C:\Users\Niall\Documents\GitHub\NewsApp\Data\obj\Debug\Data.pdb
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\Data.dll.config
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\Data.dll
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\Data.pdb
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\EntityFramework.dll
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\NewsApp.Models.dll
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\NewsApp.Models.pdb
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\EntityFramework.xml
+C:\Users\nferguson\Desktop\GitHub\News\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\nferguson\Desktop\GitHub\News\Data\obj\Debug\NewsApp.Data.csprojResolveAssemblyReference.cache
+C:\Users\nferguson\Desktop\GitHub\News\Data\obj\Debug\Data.dll
+C:\Users\nferguson\Desktop\GitHub\News\Data\obj\Debug\Data.pdb

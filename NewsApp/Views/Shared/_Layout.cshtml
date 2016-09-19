@@ -6,8 +6,9 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="newsApp" ng-cloak >
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -32,7 +33,7 @@
             <div class="site-heading">
                 <h1>Pressford Consulting</h1>
                 <hr class="small">
-                <span class="sub-heading">Latest News</span>
+                <span class="sub-heading">Staff Portal</span>
             </div>
             
         </div>

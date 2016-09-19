@@ -13,6 +13,7 @@ namespace NewsApp.Dto
         public string Title { get; set; }
         public string Subtitle { get; set; }
         public string Body { get; set; }
+        public string Author { get; set; }
         public string PublishedAgo { get; set; }
         public int Likes { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }

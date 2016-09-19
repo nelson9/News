@@ -1,7 +1,29 @@
 ﻿<div class="row">
-    <div class="col-md-12">
-        <div id="article-container">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div ng-controller="NewsController" id="article-container">
+            <article>
+                <header>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <a ng-href="/home/news/{{newsItem.id}}">
+                                <h2>{{newsItem.title}}</h2>
+                            </a>
+                        </div>
+                        <div ng-controller="NewsLike" class="col-lg-4">
+                            <div ng-click="like()" class="btn btn-primary post-like"><span class="glyphicon glyphicon-thumbs-up"> Like</span></div>
+                            <div ng-click="" class="btn btn-primary post-like"><span class="glyphicon glyphicon-share"> Share</span></div>
+                        </div>
+                    </div>
+                    
 
+                </header>
+                <h3>{{newsItem.subtitle}}</h3>
+                <p>{{newsItem.body}}</p>
+                <footer>
+                    <p class="date">Posted {{newsItem.publishedAgo}} days ago by <span class="author">{{newsItem.author}}</span><span class="float-right">Likes {{newsItem.likes}}</span> </p>
+                </footer>
+                
+            </article>
         </div>
     </div>
 </div>
@@ -10,26 +32,54 @@
 @section Scripts
 {
     <script type="text/javascript">
-        var uri = '../api/article';
-        $(document).ready(function () {
-            var articleContainer = $('#article-container');
-            $.getJSON(uri)
-                .done(function (data) {
-                    $.each(data, function (key, item) {
-                        articleContainer.append(
-                               "<article><header><h1>"
-                               + item.title + "</h1><p class='time'>Published: <time pubdate datetime='"
-                               + item.publishedAgo + "'>"
-                               + item.publishedAgo
-                               + "</time></p></header><p>"
-                               + item.body
-                               + "</p><p>"
-                               + "<span class='likes'>"
-                               + item.likes + "</span></p><input class='likeCheck' type='checkbox'></input></article>"
-                            );
-                    });
+
+        var app = angular.module("newsApp", []);
+
+        app.controller("NewsController", function ($scope, $http) {
+            var url = window.location.pathname;
+            var id = url.substring(url.lastIndexOf('/') + 1);
+            $http.get("../../api/article/" + id)
+                .success(function (data, status, headers, config) {
+
+                    $scope.newsItem = data;
+                })
+                .error(function (data, status, headers, config) {
+
                 });
+
+            $scope.like = function () {
+                var url = window.location.pathname;
+                var id = url.substring(url.lastIndexOf('/') + 1);
+
+                $http.get("../../api/article/like/" + id)
+                    .success(function () {
+
+                        $scope.newsItem.likes++;
+                    })
+                    .error(function () {
+
+                    });
+            }
+
         });
+
+        app.controller("NewsLike", function ($scope, $http) {
+            $scope.like = function() {
+                var url = window.location.pathname;
+                var id = url.substring(url.lastIndexOf('/') + 1);
+
+                $http.get("../../api/article/like/" + id)
+                    .success(function () {
+
+                        $scope.newsItem.likes++;
+                    })
+                    .error(function () {
+
+                    });
+            }
+            
+        });
+
     </script>
 
 }

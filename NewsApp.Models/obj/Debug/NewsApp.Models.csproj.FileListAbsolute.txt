@@ -8,3 +8,8 @@ C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Models\bin\Debug\NewsApp.Models.
 C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Models\obj\Debug\NewsApp.Models.csprojResolveAssemblyReference.cache
 C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Models\obj\Debug\NewsApp.Models.dll
 C:\Users\Niall\Documents\GitHub\NewsApp\NewsApp.Models\obj\Debug\NewsApp.Models.pdb
+C:\Users\nferguson\Desktop\GitHub\News\NewsApp.Models\bin\Debug\NewsApp.Models.dll
+C:\Users\nferguson\Desktop\GitHub\News\NewsApp.Models\bin\Debug\NewsApp.Models.pdb
+C:\Users\nferguson\Desktop\GitHub\News\NewsApp.Models\obj\Debug\NewsApp.Models.csprojResolveAssemblyReference.cache
+C:\Users\nferguson\Desktop\GitHub\News\NewsApp.Models\obj\Debug\NewsApp.Models.dll
+C:\Users\nferguson\Desktop\GitHub\News\NewsApp.Models\obj\Debug\NewsApp.Models.pdb
